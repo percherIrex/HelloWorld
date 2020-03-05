@@ -2,6 +2,7 @@ package com.gdou;
 
 import com.gdou.dao.UserMapper;
 import com.gdou.entity.User;
+import net.minidev.json.JSONUtil;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -21,7 +22,13 @@ public class MybatisplusApplicationTests {
         List<User> userList = userMapper.selectList(null);
         userList.forEach(System.out::println);
 
-        
+        System.out.println("这里是自定义的方法使用注解");
+        List<User> myUserList = userMapper.findAllUser();
+        myUserList.forEach(System.out::println);
+
+        System.out.println("这里是自定义的方法使用xml");
+        List<User> myUser = userMapper.findUserXml();
+        myUser.forEach(System.out::println);
     }
 
 }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gdou.dao.UserMapper">
+
+<!--    若不与接口放在同一目录，需要到application中添加路径-->
+<!--    id写方法名-->
+    <select id="findUserXml" resultType="com.gdou.entity.User">
+        select * from user
+    </select>
+
+</mapper>
